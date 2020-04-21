@@ -3,10 +3,34 @@
   <head>
     <title>Telling Lies DILAC Showcase</title>
     <link rel="stylesheet" href="stylesheet.css">
+
+    <script type="text/javascript">
+      function Path1(path) {
+        if (document.getElementById(path).style.display == 'block') {
+          document.getElementById(path).style.display='none';
+          
+        } else {
+          document.getElementById(path).style.display='block';
+        }
+      }
+    
+    
+    </script>
+
+
   </head>
   <body>
+    <ul id=menu>
+      <button onclick="Path1('path1')">Path 1</button>
+      <button onclick="Path1('path2')">Path 2</button>
+      <button onclick="Path1('path3')">Path 3</button>
+    </ul>
     <div class='visualizationBox'>
-        <img class='visualization' src='assets\storyline8draft.png'>
+        
+        <img id='visualization' class='visualization' src='assets\storylineBase.png'>
+        <img id='path1' class='path' src='assets\Path1.png' style="display:none;">
+        <img id='path2' class='path' src='assets\Path2.png' style="display:none;">
+        <img id='path3' class='path' src='assets\Path3.png' style="display:none;">
     </div>
   </body>
 </html>
